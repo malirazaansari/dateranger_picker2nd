@@ -1,5 +1,5 @@
 import React from "react";
-import { DatePickerWithRange } from "@/components/DatePickerWithRange"; // Adjust the path if necessary
+import { DatePickerWithRange } from "@/components/DatePickerWithRange";
 import { usePlasmicComponentData } from "@plasmicapp/loader-react";
 
 const DatePickerWithRangePlasmicWrapper = (props) => {

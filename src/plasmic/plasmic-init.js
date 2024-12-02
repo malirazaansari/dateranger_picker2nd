@@ -1,21 +1,22 @@
 import { registerComponent } from "@plasmicapp/loader-react";
-import DatePickerWithRangePlasmicWrapper from "@/components/DatePickerWithRangePlasmicWrapper"; // Adjust the path if necessary
+import DatePickerWithRangePlasmicWrapper from "@/components/DatePickerWithRangePlasmicWrapper";
+import { addDays } from "date-fns";
 
 registerComponent(DatePickerWithRangePlasmicWrapper, {
-  name: "DatePickerWithRange", // Name of the component in Plasmic Studio
+  name: "DatePickerWithRange",
   props: {
     minDate: {
-      type: "date", // Type for the minDate prop
+      type: "date",
       description: "The minimum selectable date",
       defaultValue: new Date(),
     },
     maxDate: {
-      type: "date", // Type for the maxDate prop
+      type: "date",
       description: "The maximum selectable date",
       defaultValue: addDays(new Date(), 365),
     },
     onDateRangeSelect: {
-      type: "function", // Type for the onDateRangeSelect prop
+      type: "function",
       description: "Callback when the date range is selected",
     },
     className: {
